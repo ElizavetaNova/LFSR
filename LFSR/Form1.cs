@@ -139,6 +139,9 @@ namespace LFSR
                     k += 1;
                     tempInitial = z.Remove(0, k);
                 }
+                string result = xor(z, originalMessage);
+                Z.Text = z;
+                Result.Text = result;
             }
             else
                 MessageBox.Show("Заполните необходимые поля");

@@ -36,8 +36,8 @@ namespace LFSR
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.Result = new System.Windows.Forms.TextBox();
+            this.Z = new System.Windows.Forms.TextBox();
             this.Coefficient = new System.Windows.Forms.TextBox();
             this.initialization = new System.Windows.Forms.TextBox();
             this.OriginalMessage = new System.Windows.Forms.TextBox();
@@ -65,8 +65,8 @@ namespace LFSR
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.Result);
+            this.groupBox1.Controls.Add(this.Z);
             this.groupBox1.Controls.Add(this.Coefficient);
             this.groupBox1.Controls.Add(this.initialization);
             this.groupBox1.Controls.Add(this.OriginalMessage);
@@ -132,21 +132,21 @@ namespace LFSR
             this.label1.TabIndex = 5;
             this.label1.Text = "Исходное сообщение";
             // 
-            // textBox5
+            // Result
             // 
-            this.textBox5.Location = new System.Drawing.Point(524, 137);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(252, 27);
-            this.textBox5.TabIndex = 4;
-            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
+            this.Result.Location = new System.Drawing.Point(524, 137);
+            this.Result.Name = "Result";
+            this.Result.Size = new System.Drawing.Size(252, 27);
+            this.Result.TabIndex = 4;
+            this.Result.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
-            // textBox4
+            // Z
             // 
-            this.textBox4.Location = new System.Drawing.Point(524, 104);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(252, 27);
-            this.textBox4.TabIndex = 3;
-            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
+            this.Z.Location = new System.Drawing.Point(524, 104);
+            this.Z.Name = "Z";
+            this.Z.Size = new System.Drawing.Size(252, 27);
+            this.Z.TabIndex = 3;
+            this.Z.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // Coefficient
             // 
@@ -155,7 +155,6 @@ namespace LFSR
             this.Coefficient.Size = new System.Drawing.Size(252, 27);
             this.Coefficient.TabIndex = 2;
             this.Coefficient.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
-
             // 
             // initialization
             // 
@@ -311,8 +310,8 @@ namespace LFSR
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox Result;
+        private System.Windows.Forms.TextBox Z;
         private System.Windows.Forms.TextBox Coefficient;
         private System.Windows.Forms.TextBox initialization;
         private System.Windows.Forms.TextBox OriginalMessage;
