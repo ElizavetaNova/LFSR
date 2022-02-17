@@ -105,7 +105,11 @@ namespace LFSR
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            string originalMessage = OriginalMessage.Text;
+            string initialVector = initialization.Text;
+            string coeffVector = Coefficient.Text;
 
+            //if (originalMessage )
         }
     }
 }

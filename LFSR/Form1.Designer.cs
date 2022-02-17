@@ -38,9 +38,9 @@ namespace LFSR
             this.label1 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Coefficient = new System.Windows.Forms.TextBox();
+            this.initialization = new System.Windows.Forms.TextBox();
+            this.OriginalMessage = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -67,9 +67,9 @@ namespace LFSR
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.Coefficient);
+            this.groupBox1.Controls.Add(this.initialization);
+            this.groupBox1.Controls.Add(this.OriginalMessage);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(776, 205);
@@ -146,26 +146,26 @@ namespace LFSR
             this.textBox4.Size = new System.Drawing.Size(252, 27);
             this.textBox4.TabIndex = 3;
             // 
-            // textBox3
+            // Coefficient
             // 
-            this.textBox3.Location = new System.Drawing.Point(178, 60);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(252, 27);
-            this.textBox3.TabIndex = 2;
+            this.Coefficient.Location = new System.Drawing.Point(178, 60);
+            this.Coefficient.Name = "Coefficient";
+            this.Coefficient.Size = new System.Drawing.Size(252, 27);
+            this.Coefficient.TabIndex = 2;
             // 
-            // textBox2
+            // initialization
             // 
-            this.textBox2.Location = new System.Drawing.Point(178, 93);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(252, 27);
-            this.textBox2.TabIndex = 1;
+            this.initialization.Location = new System.Drawing.Point(178, 93);
+            this.initialization.Name = "initialization";
+            this.initialization.Size = new System.Drawing.Size(252, 27);
+            this.initialization.TabIndex = 1;
             // 
-            // textBox1
+            // OriginalMessage
             // 
-            this.textBox1.Location = new System.Drawing.Point(178, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(252, 27);
-            this.textBox1.TabIndex = 0;
+            this.OriginalMessage.Location = new System.Drawing.Point(178, 27);
+            this.OriginalMessage.Name = "OriginalMessage";
+            this.OriginalMessage.Size = new System.Drawing.Size(252, 27);
+            this.OriginalMessage.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -301,9 +301,9 @@ namespace LFSR
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Coefficient;
+        private System.Windows.Forms.TextBox initialization;
+        private System.Windows.Forms.TextBox OriginalMessage;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
