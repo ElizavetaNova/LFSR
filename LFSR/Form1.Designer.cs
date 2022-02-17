@@ -138,6 +138,7 @@ namespace LFSR
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(252, 27);
             this.textBox5.TabIndex = 4;
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // textBox4
             // 
@@ -145,6 +146,7 @@ namespace LFSR
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(252, 27);
             this.textBox4.TabIndex = 3;
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // textBox3
             // 
@@ -152,6 +154,7 @@ namespace LFSR
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(252, 27);
             this.textBox3.TabIndex = 2;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // textBox2
             // 
@@ -159,6 +162,7 @@ namespace LFSR
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(252, 27);
             this.textBox2.TabIndex = 1;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // textBox1
             // 
@@ -166,6 +170,7 @@ namespace LFSR
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(252, 27);
             this.textBox1.TabIndex = 0;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // groupBox2
             // 
@@ -195,6 +200,7 @@ namespace LFSR
             this.button2.TabIndex = 11;
             this.button2.Text = "Расшифровать";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label6
             // 
@@ -247,6 +253,7 @@ namespace LFSR
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(252, 27);
             this.textBox6.TabIndex = 14;
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // textBox7
             // 
@@ -254,6 +261,7 @@ namespace LFSR
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(252, 27);
             this.textBox7.TabIndex = 13;
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // textBox8
             // 
@@ -261,6 +269,7 @@ namespace LFSR
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(252, 27);
             this.textBox8.TabIndex = 12;
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // textBox9
             // 
@@ -268,6 +277,7 @@ namespace LFSR
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(252, 27);
             this.textBox9.TabIndex = 11;
+            this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // textBox10
             // 
@@ -275,6 +285,7 @@ namespace LFSR
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(252, 27);
             this.textBox10.TabIndex = 10;
+            this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // Form1
             // 

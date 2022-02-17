@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LFSR
@@ -15,7 +9,7 @@ namespace LFSR
         public Form1()
         {
             InitializeComponent();
-           
+
         }
         public string multiply(string a, string b) // умножение 0011x0101 = 0001
         {
@@ -40,7 +34,7 @@ namespace LFSR
                 strmax = b;
                 strmin = a;
             }
-            for(int i = 0; i < max; i++)
+            for (int i = 0; i < max; i++)
             {
                 if (min > 0)
                 {
@@ -53,7 +47,7 @@ namespace LFSR
                 {
                     result += '0';
                 }
-                   
+
             }
             return result;
         }
@@ -94,24 +88,38 @@ namespace LFSR
                     result += xorsum(strmax.Last(), '0');
                     strmax = strmax.Remove(strmax.Length - 1, 1);
                 }
-                  
+
             }
 
             return result;
         }
-        public char xorsum(char a, char b)
+        public char xorsum(char a, char b) // посимвольный xor
         {
             if (a == b) return '0';
             else return '1';
         }
-        public char mpsum(char a, char b)
+        public char mpsum(char a, char b) // посимвольное умножение
         {
             if (a == '1' && b == '1') return '1';
             else return '0';
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //зашифровать
         {
-            
+
+        }
+
+        private void button2_Click(object sender, EventArgs e) // расшифровать
+        {
+
+        }
+
+        private void keyPress(object sender, KeyPressEventArgs e)
+        {
+            int ch = e.KeyChar;
+            if (ch != 48 && ch != 49 && ch != 8) //0,1, BackSpace 
+            {
+                e.Handled = true;
+            }
         }
     }
 }
