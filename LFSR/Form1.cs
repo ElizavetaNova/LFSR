@@ -105,11 +105,31 @@ namespace LFSR
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            string originalMessage = OriginalMessage.Text;
-            string initialVector = initialization.Text;
-            string coeffVector = Coefficient.Text;
 
-            //if (originalMessage )
+            if (OriginalMessage.Text != null & initialization.Text != null & Coefficient.Text != null)
+            {
+                string originalMessage = OriginalMessage.Text;
+                string initialVector = initialization.Text;
+                string coeffVector = Coefficient.Text;
+
+                string z = initialVector; //промежуточный результат, который в конце складывается с исходным сообщением
+
+                while (z.Length != originalMessage.Length)
+                {
+                    string multip = multiply(initialVector, coeffVector);
+                    foreach(var bit in multip)
+                    {
+
+                    }
+                    for (int i =1; i<multip.Length; i++)
+                    {
+
+                    }
+                }
+            }
+            else
+                MessageBox.Show("Заполните необходимые поля");
+            
         }
     }
 }
