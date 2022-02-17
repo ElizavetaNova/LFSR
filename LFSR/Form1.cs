@@ -13,7 +13,7 @@ namespace LFSR
         }
         public char getsum(string a) // сумма по строке
         {
-            char c = a[0];
+            ыchar c = a[0];
             a = a.Remove(0, 1);
             for(int i=0; i<a.Length; i++)
             {
@@ -143,6 +143,7 @@ namespace LFSR
                     }
                     string result = xor(z, originalMessage);
                     Z.Text = z;
+                    result = new string(result.Reverse().ToArray());
                     Result.Text = result;
                 }
                 else
