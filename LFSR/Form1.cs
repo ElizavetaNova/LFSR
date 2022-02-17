@@ -178,7 +178,9 @@ namespace LFSR
                     }
                     string result = xor(cryptogramText, z);
                     ZDecod.Text = z;
+                    result = result.Reverse().ToString();
                     RezultDecod.Text = result;
+
 
                 }
                 else
