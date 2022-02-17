@@ -119,37 +119,72 @@ namespace LFSR
 
             if (OriginalMessage.Text != null & initialization.Text != null & Coefficient.Text != null)
             {
-                string originalMessage = OriginalMessage.Text;
-                string initialVector = initialization.Text;
-                string coeffVector = Coefficient.Text;
-
-                string z = initialVector; //промежуточный результат, который в конце складывается с исходным сообщением
-                char sumBit;
-                string tempInitial = initialVector;
-                string multip = "";
-                int k = 0; //сколько символов нужно удалить, чтоб получить tempInitial
-                
-
-                while (z.Length != originalMessage.Length)
+                if (initialization.Text.Length == Coefficient.Text.Length)
                 {
-                   
-                    multip = multiply(tempInitial, coeffVector);
-                    sumBit = getsum(multip);
-                    z = z + sumBit;
-                    k += 1;
-                    tempInitial = z.Remove(0, k);
+                    string originalMessage = OriginalMessage.Text;
+                    string initialVector = initialization.Text;
+                    string coeffVector = Coefficient.Text;
+
+                    string z = initialVector; //промежуточный результат, который в конце складывается с исходным сообщением
+                    char sumBit;
+                    string tempInitial = initialVector;
+                    string multip = "";
+                    int k = 0; //сколько символов нужно удалить, чтоб получить tempInitial
+
+
+                    while (z.Length != originalMessage.Length)
+                    {
+
+                        multip = multiply(tempInitial, coeffVector);
+                        sumBit = getsum(multip);
+                        z = z + sumBit;
+                        k += 1;
+                        tempInitial = z.Remove(0, k);
+                    }
+                    string result = xor(z, originalMessage);
+                    Z.Text = z;
+                    Result.Text = result;
                 }
-                string result = xor(z, originalMessage);
-                Z.Text = z;
-                Result.Text = result;
+                else
+                    MessageBox.Show("Длины вектора коэффициентов и вектора инициализации должны совпадать");
             }
             else
-                MessageBox.Show("Заполните необходимые поля");
-            
+                MessageBox.Show("Заполните необходимые поля ");
         }
 
         private void button2_Click(object sender, EventArgs e) // расшифровать
         {
+            if (Сryptogram.Text != null & CoefficientDecod.Text != null & initializationDecod.Text != null)
+            {
+                if (CoefficientDecod.Text.Length == initializationDecod.Text.Length)
+                {
+                    string cryptogramText = Сryptogram.Text;
+                    string initialVector = initializationDecod.Text;
+                    string coeffVector = CoefficientDecod.Text;
+
+                    string z = initialVector; //промежуточный результат, который в конце складывается с исходным сообщением
+                    char sumBit;
+                    string tempInitial = initialVector;
+                    string multip = "";
+                    int k = 0; //сколько символов нужно удалить, чтоб получить tempInitial
+
+                    while (z.Length != cryptogramText.Length)
+                    {
+                        multip = multiply(tempInitial, coeffVector);
+                        sumBit = getsum(multip);
+                        z = z + sumBit;
+                        k += 1;
+                        tempInitial = z.Remove(0, k);
+                    }
+                    string result = xor(cryptogramText, z);
+                    ZDecod.Text = z;
+                    RezultDecod.Text = result;
+
+                }
+                else
+                    MessageBox.Show("Длины вектора коэффициентов и вектора инициализации должны совпадать");
+            }
+            else MessageBox.Show("Заполните необходимые поля");
 
         }
 
