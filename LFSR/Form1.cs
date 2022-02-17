@@ -11,6 +11,17 @@ namespace LFSR
             InitializeComponent();
 
         }
+        public char getsum(string a) // сумма по строке
+        {
+            char c = a[0];
+            a = a.Remove(0, 1);
+            for(int i=0; i<a.Length; i++)
+            {
+                c = xorsum(c, a[i]);
+
+            }
+            return c;
+        }
         public string multiply(string a, string b) // умножение 0011x0101 = 0001
         {
             int lena = a.Length;
