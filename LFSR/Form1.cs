@@ -125,18 +125,19 @@ namespace LFSR
 
                 string z = initialVector; //промежуточный результат, который в конце складывается с исходным сообщением
                 char sumBit;
+                string tempInitial = initialVector;
+                string multip = "";
+                int k = 0; //сколько символов нужно удалить, чтоб получить tempInitial
+                
 
                 while (z.Length != originalMessage.Length)
                 {
-                    string multip = multiply(initialVector, coeffVector);
-                    foreach(var bit in multip)
-                    {
-
-                    }
-                    for (int i =1; i<multip.Length; i++)
-                    {
-                        sumBit = xorsum(multip[i - 1], multip[i]);
-                    }
+                   
+                    multip = multiply(tempInitial, coeffVector);
+                    sumBit = getsum(multip);
+                    z = z + sumBit;
+                    k += 1;
+                    tempInitial = z.Remove(0, k);
                 }
             }
             else
