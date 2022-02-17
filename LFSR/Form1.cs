@@ -113,6 +113,7 @@ namespace LFSR
                 string coeffVector = Coefficient.Text;
 
                 string z = initialVector; //промежуточный результат, который в конце складывается с исходным сообщением
+                char sumBit;
 
                 while (z.Length != originalMessage.Length)
                 {
@@ -123,7 +124,7 @@ namespace LFSR
                     }
                     for (int i =1; i<multip.Length; i++)
                     {
-
+                        sumBit = xorsum(multip[i - 1], multip[i]);
                     }
                 }
             }
