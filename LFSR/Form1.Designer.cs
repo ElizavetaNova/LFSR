@@ -70,6 +70,7 @@ namespace LFSR
             this.groupBox1.Controls.Add(this.Coefficient);
             this.groupBox1.Controls.Add(this.initialization);
             this.groupBox1.Controls.Add(this.OriginalMessage);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(776, 205);
@@ -90,7 +91,7 @@ namespace LFSR
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(442, 140);
+            this.label5.Location = new System.Drawing.Point(436, 175);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 20);
             this.label5.TabIndex = 9;
@@ -99,7 +100,7 @@ namespace LFSR
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(499, 107);
+            this.label4.Location = new System.Drawing.Point(493, 142);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(18, 20);
             this.label4.TabIndex = 8;
@@ -134,7 +135,7 @@ namespace LFSR
             // 
             // Result
             // 
-            this.Result.Location = new System.Drawing.Point(524, 137);
+            this.Result.Location = new System.Drawing.Point(518, 172);
             this.Result.Name = "Result";
             this.Result.Size = new System.Drawing.Size(252, 27);
             this.Result.TabIndex = 4;
@@ -142,7 +143,7 @@ namespace LFSR
             // 
             // Z
             // 
-            this.Z.Location = new System.Drawing.Point(524, 104);
+            this.Z.Location = new System.Drawing.Point(518, 139);
             this.Z.Name = "Z";
             this.Z.Size = new System.Drawing.Size(252, 27);
             this.Z.TabIndex = 3;

@@ -13,7 +13,7 @@ namespace LFSR
         }
         public char getsum(string a) // сумма по строке
         {
-            ыchar c = a[0];
+            char c = a[0];
             a = a.Remove(0, 1);
             for(int i=0; i<a.Length; i++)
             {
@@ -179,6 +179,7 @@ namespace LFSR
                     }
                     string result = xor(cryptogramText, z);
                     ZDecod.Text = z;
+                    result = new string(result.Reverse().ToArray());
                     //result = result.Reverse().ToString();
                     RezultDecod.Text = result;
 
