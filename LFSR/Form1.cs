@@ -11,7 +11,7 @@ namespace LFSR
             InitializeComponent();
 
         }
-        public char getsum(string a) // сумма по строке
+        public char getSumOfBitInline(string a) // сумма по строке
         {
             char c = a[0];
             a = a.Remove(0, 1);
@@ -116,82 +116,49 @@ namespace LFSR
         }
         private void button1_Click(object sender, EventArgs e) //зашифровать
         {
-
-            if (OriginalMessage.Text != null & initialization.Text != null & Coefficient.Text != null)
-            {
-                if (initialization.Text.Length == Coefficient.Text.Length)
-                {
-                    string originalMessage = OriginalMessage.Text;
-                    string initialVector = initialization.Text;
-                    string coeffVector = Coefficient.Text;
-
-                    string z = initialVector; //промежуточный результат, который в конце складывается с исходным сообщением
-                    char sumBit;
-                    string tempInitial = initialVector;
-                    string multip = "";
-                    int k = 0; //сколько символов нужно удалить, чтоб получить tempInitial
-
-
-                    while (z.Length != originalMessage.Length)
-                    {
-
-                        multip = multiply(tempInitial, coeffVector);
-                        sumBit = getsum(multip);
-                        z = z + sumBit;
-                        k += 1;
-                        tempInitial = z.Remove(0, k);
-                    }
-                    string result = xor(z, originalMessage);
-                    Z.Text = z;
-                    result = new string(result.Reverse().ToArray());
-                    Result.Text = result;
-                }
-                else
-                    MessageBox.Show("Длины вектора коэффициентов и вектора инициализации должны совпадать");
-            }
-            else
-                MessageBox.Show("Заполните необходимые поля ");
+            CodeAndDecod(initialization.Text, Coefficient.Text, OriginalMessage.Text);
         }
 
         private void button2_Click(object sender, EventArgs e) // расшифровать
         {
-            if (Сryptogram.Text != null & CoefficientDecod.Text != null & initializationDecod.Text != null)
+            CodeAndDecod(initializationDecod.Text, CoefficientDecod.Text, Сryptogram.Text);            
+        }
+        public string CodeAndDecod(string initialVector, string coeffVector, string binNumber)
+        {
+            if (binNumber != null & coeffVector != null & initialVector != null)
             {
-                if (CoefficientDecod.Text.Length == initializationDecod.Text.Length)
+                if (coeffVector.Length == initialVector.Length)
                 {
-                    string cryptogramText = Сryptogram.Text;
-                    string initialVector = initializationDecod.Text;
-                    string coeffVector = CoefficientDecod.Text;
-
-                    string z = initialVector; //промежуточный результат, который в конце складывается с исходным сообщением
-                    char sumBit;
+                    string vectorZ = initialVector; //промежуточный результат, который в конце складывается с исходным сообщением
+                    char sumBitInString;
                     string tempInitial = initialVector;
                     string multip = "";
-                    int k = 0; //сколько символов нужно удалить, чтоб получить tempInitial
+                    int countDeleteBit = 0; //сколько символов нужно удалить, чтоб получить tempInitial
 
-                    while (z.Length != cryptogramText.Length)
+                    while (vectorZ.Length != binNumber.Length)
                     {
                         multip = multiply(tempInitial, coeffVector);
-                        sumBit = getsum(multip);
-                        z = z + sumBit;
-                        k += 1;
-                        tempInitial = z.Remove(0, k);
+                        sumBitInString = getSumOfBitInline(multip);
+                        vectorZ = vectorZ + sumBitInString;
+                        countDeleteBit += 1;
+                        tempInitial = vectorZ.Remove(0, countDeleteBit);
                     }
-                    string result = xor(cryptogramText, z);
-                    ZDecod.Text = z;
+                    string result = xor(binNumber, vectorZ);
                     result = new string(result.Reverse().ToArray());
-                    //result = result.Reverse().ToString();
-                    RezultDecod.Text = result;
-
-
+                    return result;
                 }
                 else
+                {
                     MessageBox.Show("Длины вектора коэффициентов и вектора инициализации должны совпадать");
+                    return "";
+                }
             }
-            else MessageBox.Show("Заполните необходимые поля");
-
+            else
+            {
+                MessageBox.Show("Заполните необходимые поля");
+                return "";
+            }            
         }
-
         private void keyPress(object sender, KeyPressEventArgs e)
         {
             int ch = e.KeyChar;
