@@ -114,16 +114,16 @@ namespace LFSR
             if (a == '1' && b == '1') return '1';
             else return '0';
         }
-        private void button1_Click(object sender, EventArgs e) //зашифровать
+        private void Encryption(object sender, EventArgs e) //зашифровать
         {
-            CodeAndDecod(initialization.Text, Coefficient.Text, OriginalMessage.Text);
+            EncryptAndDecript(initialization.Text, Coefficient.Text, OriginalMessage.Text);
         }
 
-        private void button2_Click(object sender, EventArgs e) // расшифровать
+        private void Decryption(object sender, EventArgs e) // расшифровать
         {
-            CodeAndDecod(initializationDecod.Text, CoefficientDecod.Text, Сryptogram.Text);            
+            EncryptAndDecript(initializationDecod.Text, CoefficientDecod.Text, Сryptogram.Text);            
         }
-        public string CodeAndDecod(string initialVector, string coeffVector, string binNumber)
+        public string EncryptAndDecript(string initialVector, string coeffVector, string binNumber)
         {
             if (binNumber != null & coeffVector != null & initialVector != null)
             {
