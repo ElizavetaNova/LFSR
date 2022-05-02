@@ -29,54 +29,54 @@ namespace LFSR
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.EncryptionBox = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Result = new System.Windows.Forms.TextBox();
-            this.Z = new System.Windows.Forms.TextBox();
-            this.Coefficient = new System.Windows.Forms.TextBox();
-            this.initialization = new System.Windows.Forms.TextBox();
-            this.OriginalMessage = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ResultE = new System.Windows.Forms.TextBox();
+            this.ZE = new System.Windows.Forms.TextBox();
+            this.textBoxCoefficientVectorE = new System.Windows.Forms.TextBox();
+            this.textBoxInitializationVectorE = new System.Windows.Forms.TextBox();
+            this.textBoxOriginalMessageE = new System.Windows.Forms.TextBox();
+            this.DecryptionBox = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.RezultDecod = new System.Windows.Forms.TextBox();
-            this.ZDecod = new System.Windows.Forms.TextBox();
-            this.CoefficientDecod = new System.Windows.Forms.TextBox();
-            this.initializationDecod = new System.Windows.Forms.TextBox();
-            this.Сryptogram = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.ResultD = new System.Windows.Forms.TextBox();
+            this.ZD = new System.Windows.Forms.TextBox();
+            this.textBoxCoefficientVectorD = new System.Windows.Forms.TextBox();
+            this.textBoxInitializationVectorD = new System.Windows.Forms.TextBox();
+            this.textBoxСryptogramD = new System.Windows.Forms.TextBox();
+            this.EncryptionBox.SuspendLayout();
+            this.DecryptionBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // EncryptionBox
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.Result);
-            this.groupBox1.Controls.Add(this.Z);
-            this.groupBox1.Controls.Add(this.Coefficient);
-            this.groupBox1.Controls.Add(this.initialization);
-            this.groupBox1.Controls.Add(this.OriginalMessage);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 205);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Зашифрование";
+            this.EncryptionBox.Controls.Add(this.button1);
+            this.EncryptionBox.Controls.Add(this.label5);
+            this.EncryptionBox.Controls.Add(this.label4);
+            this.EncryptionBox.Controls.Add(this.label3);
+            this.EncryptionBox.Controls.Add(this.label2);
+            this.EncryptionBox.Controls.Add(this.label1);
+            this.EncryptionBox.Controls.Add(this.ResultE);
+            this.EncryptionBox.Controls.Add(this.ZE);
+            this.EncryptionBox.Controls.Add(this.textBoxCoefficientVectorE);
+            this.EncryptionBox.Controls.Add(this.textBoxInitializationVectorE);
+            this.EncryptionBox.Controls.Add(this.textBoxOriginalMessageE);
+            this.EncryptionBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EncryptionBox.Location = new System.Drawing.Point(12, 12);
+            this.EncryptionBox.Name = "EncryptionBox";
+            this.EncryptionBox.Size = new System.Drawing.Size(776, 205);
+            this.EncryptionBox.TabIndex = 0;
+            this.EncryptionBox.TabStop = false;
+            this.EncryptionBox.Text = "Зашифрование";
             // 
             // button1
             // 
@@ -86,7 +86,7 @@ namespace LFSR
             this.button1.TabIndex = 10;
             this.button1.Text = "Зашифровать";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Encryption);
             // 
             // label5
             // 
@@ -109,7 +109,7 @@ namespace LFSR
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(-1, 96);
+            this.label3.Location = new System.Drawing.Point(6, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(173, 20);
             this.label3.TabIndex = 7;
@@ -133,65 +133,60 @@ namespace LFSR
             this.label1.TabIndex = 5;
             this.label1.Text = "Исходное сообщение";
             // 
-            // Result
+            // ResultE
             // 
-            this.Result.Location = new System.Drawing.Point(518, 172);
-            this.Result.Name = "Result";
-            this.Result.Size = new System.Drawing.Size(252, 27);
-            this.Result.TabIndex = 4;
-            this.Result.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
+            this.ResultE.Location = new System.Drawing.Point(518, 172);
+            this.ResultE.Name = "ResultE";
+            this.ResultE.Size = new System.Drawing.Size(252, 27);
+            this.ResultE.TabIndex = 4;
             // 
-            // Z
+            // ZE
             // 
-            this.Z.Location = new System.Drawing.Point(518, 139);
-            this.Z.Name = "Z";
-            this.Z.Size = new System.Drawing.Size(252, 27);
-            this.Z.TabIndex = 3;
-            this.Z.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
+            this.ZE.Location = new System.Drawing.Point(518, 139);
+            this.ZE.Name = "ZE";
+            this.ZE.Size = new System.Drawing.Size(252, 27);
+            this.ZE.TabIndex = 3;
             // 
-            // Coefficient
+            // textBoxCoefficientVectorE
             // 
-            this.Coefficient.Location = new System.Drawing.Point(178, 60);
-            this.Coefficient.Name = "Coefficient";
-            this.Coefficient.Size = new System.Drawing.Size(252, 27);
-            this.Coefficient.TabIndex = 2;
-            this.Coefficient.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
+            this.textBoxCoefficientVectorE.Location = new System.Drawing.Point(178, 60);
+            this.textBoxCoefficientVectorE.Name = "textBoxCoefficientVectorE";
+            this.textBoxCoefficientVectorE.Size = new System.Drawing.Size(252, 27);
+            this.textBoxCoefficientVectorE.TabIndex = 2;
             // 
-            // initialization
+            // textBoxInitializationVectorE
             // 
-            this.initialization.Location = new System.Drawing.Point(178, 93);
-            this.initialization.Name = "initialization";
-            this.initialization.Size = new System.Drawing.Size(252, 27);
-            this.initialization.TabIndex = 1;
-            this.initialization.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
+            this.textBoxInitializationVectorE.Location = new System.Drawing.Point(178, 93);
+            this.textBoxInitializationVectorE.Name = "textBoxInitializationVectorE";
+            this.textBoxInitializationVectorE.Size = new System.Drawing.Size(252, 27);
+            this.textBoxInitializationVectorE.TabIndex = 1;
             // 
-            // OriginalMessage
+            // textBoxOriginalMessageE
             // 
-            this.OriginalMessage.Location = new System.Drawing.Point(178, 27);
-            this.OriginalMessage.Name = "OriginalMessage";
-            this.OriginalMessage.Size = new System.Drawing.Size(252, 27);
-            this.OriginalMessage.TabIndex = 0;
-            this.OriginalMessage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
+            this.textBoxOriginalMessageE.Location = new System.Drawing.Point(178, 27);
+            this.textBoxOriginalMessageE.Name = "textBoxOriginalMessageE";
+            this.textBoxOriginalMessageE.Size = new System.Drawing.Size(252, 27);
+            this.textBoxOriginalMessageE.TabIndex = 0;
             // 
-            // groupBox2
+            // DecryptionBox
             // 
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.RezultDecod);
-            this.groupBox2.Controls.Add(this.ZDecod);
-            this.groupBox2.Controls.Add(this.CoefficientDecod);
-            this.groupBox2.Controls.Add(this.initializationDecod);
-            this.groupBox2.Controls.Add(this.Сryptogram);
-            this.groupBox2.Location = new System.Drawing.Point(12, 236);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(776, 202);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Расшифрование";
+            this.DecryptionBox.Controls.Add(this.button2);
+            this.DecryptionBox.Controls.Add(this.label6);
+            this.DecryptionBox.Controls.Add(this.label7);
+            this.DecryptionBox.Controls.Add(this.label8);
+            this.DecryptionBox.Controls.Add(this.label9);
+            this.DecryptionBox.Controls.Add(this.label10);
+            this.DecryptionBox.Controls.Add(this.ResultD);
+            this.DecryptionBox.Controls.Add(this.ZD);
+            this.DecryptionBox.Controls.Add(this.textBoxCoefficientVectorD);
+            this.DecryptionBox.Controls.Add(this.textBoxInitializationVectorD);
+            this.DecryptionBox.Controls.Add(this.textBoxСryptogramD);
+            this.DecryptionBox.Location = new System.Drawing.Point(12, 236);
+            this.DecryptionBox.Name = "DecryptionBox";
+            this.DecryptionBox.Size = new System.Drawing.Size(776, 202);
+            this.DecryptionBox.TabIndex = 1;
+            this.DecryptionBox.TabStop = false;
+            this.DecryptionBox.Text = "Расшифрование";
             // 
             // button2
             // 
@@ -201,7 +196,7 @@ namespace LFSR
             this.button2.TabIndex = 11;
             this.button2.Text = "Расшифровать";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Decryption);
             // 
             // label6
             // 
@@ -248,75 +243,70 @@ namespace LFSR
             this.label10.TabIndex = 15;
             this.label10.Text = "Шифрограмма";
             // 
-            // RezultDecod
+            // ResultD
             // 
-            this.RezultDecod.Location = new System.Drawing.Point(518, 167);
-            this.RezultDecod.Name = "RezultDecod";
-            this.RezultDecod.Size = new System.Drawing.Size(252, 27);
-            this.RezultDecod.TabIndex = 14;
-            this.RezultDecod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
+            this.ResultD.Location = new System.Drawing.Point(518, 167);
+            this.ResultD.Name = "ResultD";
+            this.ResultD.Size = new System.Drawing.Size(252, 27);
+            this.ResultD.TabIndex = 14;
             // 
-            // ZDecod
+            // ZD
             // 
-            this.ZDecod.Location = new System.Drawing.Point(518, 134);
-            this.ZDecod.Name = "ZDecod";
-            this.ZDecod.Size = new System.Drawing.Size(252, 27);
-            this.ZDecod.TabIndex = 13;
-            this.ZDecod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
+            this.ZD.Location = new System.Drawing.Point(518, 134);
+            this.ZD.Name = "ZD";
+            this.ZD.Size = new System.Drawing.Size(252, 27);
+            this.ZD.TabIndex = 13;
             // 
-            // CoefficientDecod
+            // textBoxCoefficientVectorD
             // 
-            this.CoefficientDecod.Location = new System.Drawing.Point(178, 62);
-            this.CoefficientDecod.Name = "CoefficientDecod";
-            this.CoefficientDecod.Size = new System.Drawing.Size(252, 27);
-            this.CoefficientDecod.TabIndex = 12;
-            this.CoefficientDecod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
+            this.textBoxCoefficientVectorD.Location = new System.Drawing.Point(178, 62);
+            this.textBoxCoefficientVectorD.Name = "textBoxCoefficientVectorD";
+            this.textBoxCoefficientVectorD.Size = new System.Drawing.Size(252, 27);
+            this.textBoxCoefficientVectorD.TabIndex = 12;
             // 
-            // initializationDecod
+            // textBoxInitializationVectorD
             // 
-            this.initializationDecod.Location = new System.Drawing.Point(178, 95);
-            this.initializationDecod.Name = "initializationDecod";
-            this.initializationDecod.Size = new System.Drawing.Size(252, 27);
-            this.initializationDecod.TabIndex = 11;
-            this.initializationDecod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
+            this.textBoxInitializationVectorD.Location = new System.Drawing.Point(178, 95);
+            this.textBoxInitializationVectorD.Name = "textBoxInitializationVectorD";
+            this.textBoxInitializationVectorD.Size = new System.Drawing.Size(252, 27);
+            this.textBoxInitializationVectorD.TabIndex = 11;
             // 
-            // Сryptogram
+            // textBoxСryptogramD
             // 
-            this.Сryptogram.Location = new System.Drawing.Point(178, 29);
-            this.Сryptogram.Name = "Сryptogram";
-            this.Сryptogram.Size = new System.Drawing.Size(252, 27);
-            this.Сryptogram.TabIndex = 10;
-            this.Сryptogram.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
+            this.textBoxСryptogramD.Location = new System.Drawing.Point(178, 29);
+            this.textBoxСryptogramD.Name = "textBoxСryptogramD";
+            this.textBoxСryptogramD.Size = new System.Drawing.Size(252, 27);
+            this.textBoxСryptogramD.TabIndex = 10;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.DecryptionBox);
+            this.Controls.Add(this.EncryptionBox);
             this.Name = "Form1";
             this.Text = "LFSR";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.EncryptionBox.ResumeLayout(false);
+            this.EncryptionBox.PerformLayout();
+            this.DecryptionBox.ResumeLayout(false);
+            this.DecryptionBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox EncryptionBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Result;
-        private System.Windows.Forms.TextBox Z;
-        private System.Windows.Forms.TextBox Coefficient;
-        private System.Windows.Forms.TextBox initialization;
-        private System.Windows.Forms.TextBox OriginalMessage;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox ResultE;
+        private System.Windows.Forms.TextBox ZE;
+        private System.Windows.Forms.TextBox textBoxCoefficientVectorE;
+        private System.Windows.Forms.TextBox textBoxInitializationVectorE;
+        private System.Windows.Forms.TextBox textBoxOriginalMessageE;
+        private System.Windows.Forms.GroupBox DecryptionBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -326,11 +316,11 @@ namespace LFSR
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox RezultDecod;
-        private System.Windows.Forms.TextBox ZDecod;
-        private System.Windows.Forms.TextBox CoefficientDecod;
-        private System.Windows.Forms.TextBox initializationDecod;
-        private System.Windows.Forms.TextBox Сryptogram;
+        private System.Windows.Forms.TextBox ResultD;
+        private System.Windows.Forms.TextBox ZD;
+        private System.Windows.Forms.TextBox textBoxCoefficientVectorD;
+        private System.Windows.Forms.TextBox textBoxInitializationVectorD;
+        private System.Windows.Forms.TextBox textBoxСryptogramD;
     }
 }
 
